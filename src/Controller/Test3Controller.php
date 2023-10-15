@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Doctrine\Migrations\Provider\Exception\NoMappingFound;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -23,7 +24,7 @@ class Test3Controller extends AbstractController
     {
         return $this->render('test3/msg.html.twig', [
             'controller_name' => 'Test3Controller',
-            'n' => name,
+            'n' => nom,
         ]);
     }
 
